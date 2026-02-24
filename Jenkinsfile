@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_DIR = "/home/xelpmoc/Desktop/AWS-SERVER-CONNECTION/jenkins/nodejs-jenkins-pm2/nodejs-jenkins-pm2"
+        APP_DIR = "/home/xelpmoc/Desktop/AWS-SERVER-CONNECTION/jenkins/nodejs-jenkins-pm2"
     }
 
     stages {
