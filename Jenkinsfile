@@ -16,14 +16,15 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh '''
-                rsync -av --delete ./ $APP_DIR/
-                cd $APP_DIR
-                npm install
-                pm2 reload ecosystem.config.js || pm2 start ecosystem.config.js
-                pm2 save
-                '''
-            }
-        }
+             sh '''
+             rsync -av --delete ./ /host_jenkins/nodejs-jenkins-pm2/
+             cd /host_jenkins/nodejs-jenkins-pm2/
+             npm install
+             pm2 reload ecosystem.config.js || pm2 start ecosystem.config.js
+             pm2 save
+             '''
+    }
+}
+  
     }
 }
